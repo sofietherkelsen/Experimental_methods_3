@@ -13,7 +13,7 @@ In this first part of the assignment you will:
 1) Create a Github account and link it to your RStudio
 2) Use small nifty lines of code to transform several data sets into just one. The final data set will contain only the variables that are needed for the analysis in the next parts of the assignment
 3) Become familiar with the tidyverse package, which you will find handy for later assignments.
-
+ 
 
 ## 0. First an introduction on the data
 
@@ -47,7 +47,11 @@ Load the three data sets, after downloading them from dropbox and saving them in
 * Word data: https://www.dropbox.com/s/8ng1civpl2aux58/token_train.csv?dl=0
 
 ```{r}
+library(tidyverse)
 
+data1 = read.csv("LU_train.csv")
+data2 = read.csv("demo_train(1).csv")
+data3 = read.csv("token_train.csv")
 ```
 
 Explore the 3 datasets (e.g. visualize them, summarize them, etc.). You will see that the data is messy, since the psychologists collected the demographic data, a linguist analyzed the length of utterance in May 2014 and the same linguist analyzed the words several months later. In particular:
